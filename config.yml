@@ -36,9 +36,9 @@ policies:
 #   - name: UnexpecTEDIntentPolicy
 #     max_history: 5
 #     epochs: 100
-#   - name: TEDPolicy
-#     max_history: 5
-#     epochs: 100
+   - name: TEDPolicy
+     max_history: 5
+     epochs: 100
 #     constrain_similarities: true
 #   - name: custom_components.SVC_policy.SVCPolicy
-    - name: custom_components.RF_policy.RFPolicy
+    #- name: custom_components.RF_policy.RFPolicy
