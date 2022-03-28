@@ -1,0 +1,112 @@
+version: "3.0"
+intents:
+  - ReserveRestaurant_GOODBYE
+  - ReserveRestaurant_AFFIRM_INTENT
+  - ReserveRestaurant_REQUEST
+  - Undefined_THANK_YOU
+  - FindRestaurants_REQUEST_ALTS
+  - ReserveRestaurant_SELECT
+  - FindRestaurants_INFORM
+  - ReserveRestaurant_AFFIRM
+  - ReserveRestaurant_THANK_YOU
+  - ReserveRestaurant_INFORM_INTENT
+  - FindRestaurants_INFORM_INTENT
+  - ReserveRestaurant_INFORM
+  - ReserveRestaurant_NEGATE
+  - FindRestaurants_SELECT
+  - FindRestaurants_REQUEST
+entities:
+  - intent
+  - city
+  - party_size
+  - restaurant_name
+  - cuisine
+  - phone_number
+  - time
+  - price_range
+  - date
+  - has_live_music
+  - serves_alcohol
+  - street_address
+slots:
+ intent:
+  type: text
+  mappings:
+  - type: from_text
+ city:
+  type: text
+  mappings:
+  - type: from_text
+ party_size:
+  type: text
+  mappings:
+  - type: from_text
+ restaurant_name:
+  type: text
+  mappings:
+  - type: from_text
+ cuisine:
+  type: text
+  mappings:
+  - type: from_text
+ phone_number:
+  type: text
+  mappings:
+  - type: from_text
+ time:
+  type: text
+  mappings:
+  - type: from_text
+ price_range:
+  type: text
+  mappings:
+  - type: from_text
+ date:
+  type: text
+  mappings:
+  - type: from_text
+ has_live_music:
+  type: text
+  mappings:
+  - type: from_text
+ serves_alcohol:
+  type: text
+  mappings:
+  - type: from_text
+ street_address:
+  type: text
+  mappings:
+  - type: from_text
+responses:
+  utter_request:
+    - text: "Sentences of bot"
+  utter_offer:
+    - text: "Sentences of bot"
+  utter_inform:
+    - text: "Sentences of bot"
+  utter_inform_count:
+    - text: "Sentences of bot"
+  utter_confirm:
+    - text: "Sentences of bot"
+  utter_notify_success:
+    - text: "Sentences of bot"
+  utter_goodbye:
+    - text: "Sentences of bot"
+  utter_offer_intent:
+    - text: "Sentences of bot"
+  utter_req_more:
+    - text: "Sentences of bot"
+  utter_notify_failure:
+    - text: "Sentences of bot"
+
+actions:
+    - utter_request
+    - utter_offer
+    - utter_inform
+    - utter_inform_count
+    - utter_confirm
+    - utter_notify_success
+    - utter_goodbye
+    - utter_offer_intent
+    - utter_req_more
+    - utter_notify_failure

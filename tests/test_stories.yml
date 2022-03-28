@@ -4,2200 +4,2876 @@ stories:
 - story: story_0
   steps:
   - user: |
-      I wanna check my calendar for events.
-    intent: GetEvents
+      Hi, could you get me a restaurant booking on the 8th please?
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
+  - action: utter_request
   - action: utter_request
   - user: |
-      Look at the 6th.
-    intent: GetEvents
-  - action: utter_inform_count
+      Could you get me a reservation at P.f. Chang's in Corte Madera at afternoon 12?
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      What about any other events scheduled for this Sunday?
-    intent: GetEvents
-  - action: utter_offer
+      Sure, that is great.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_failure
+  - action: utter_req_more
   - user: |
-      Okay, sounds great. When am I available?
-    intent: GetAvailableTime
-  - action: utter_offer
+      Could you try booking a table at Benissimo instead?
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Any other available time?
-    intent: GetAvailableTime
-  - action: utter_offer
+      Sure, may I know if they have vegetarian options and how expensive is their food?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_inform
+  - action: utter_notify_success
   - user: |
-      Okay, great. Thanks, that's all I needed.
-    intent: GetAvailableTime
+      I see, thanks alot!
+    intent: ReserveRestaurant_THANK_YOU
+  - action: utter_req_more
+  - user: |
+      No, that is all. Thank you!
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_1
   steps:
   - user: |
-      Is there anything scheduled on my calendar for March 13th?
-    intent: GetEvents
-  - action: utter_offer
+      Can you book a table for me at the Ancient Szechuan for the 11th of this month at 11:30 am?
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - user: |
-      Do I have anything scheduled for the 1st of this month?
-    intent: GetEvents
-  - action: utter_offer
+      Can you book a table at the Butterfly restaurant in San Francisco?
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      That's awesome. When is my schedule clear?
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      That's perfect. What cuisine do they offer?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_notify_success
   - user: |
-      That would be fine. I do not need anymore assistance.
-    intent: GetAvailableTime
+      Can you get me the user rating of the restaurant? Is it expensive?
+    intent: ReserveRestaurant_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      Thanks a bunch!
+    intent: ReserveRestaurant_THANK_YOU
+  - action: utter_req_more
+  - user: |
+      No. Thank you. That's all I need.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_2
   steps:
   - user: |
-      Hello, I want to check the upcoming events on my calendar.
-    intent: GetEvents
+      Can you check restaurants in Pacifica, I'm looking to make a reservation.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      Please check for later today.
-    intent: GetEvents
-  - action: utter_inform_count
+      See if you can get one at Puerto 27 for 1:15 pm.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      What other events do I have today?
-    intent: GetEvents
-  - action: utter_offer
+      Yes that's right.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
   - user: |
-      Do I have other events scheduled today?
-    intent: GetEvents
-  - action: utter_offer
-  - user: |
-      Sounds good. Can you please show me when I am available?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Sounds great, thank you. That is all I need.
-    intent: GetAvailableTime
+      Thanks so much. That's all I need for now.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_3
   steps:
   - user: |
-      I need to check my calendar.
-    intent: GetEvents
+      I need to book a dinner reservation for a date. Help me reserve a table at a restaurant.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      I need the 9th of March.
-    intent: GetEvents
-  - action: utter_inform_count
+      Something around 8 in the night should be fine. Oh, and look in the San Jose area.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
   - user: |
-      Give me my calendar for the 13th.
-    intent: GetEvents
-  - action: utter_offer
+      Let's try booking a table at Little Hunan.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Ok. That sounds good.
-    intent: GetEvents
+      It sure is. Please make the reservation right away.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_failure
   - action: utter_req_more
   - user: |
-      Show me when I an available.
-    intent: GetAvailableTime
-  - action: utter_offer
+      Okay. Try booking a table at Little Hunan again but make it at a quarter past 5 in the evening.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Do I have any other openings?
-    intent: GetAvailableTime
+      That's correct. Let's hope the reservation goes through this time.
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_offer
-  - user: |
-      Do I have any other openings?
-    intent: GetAvailableTime
   - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
   - user: |
-      Ok, Good. Thanks.
-    intent: GetAvailableTime
+      Really? That'll work just fine. Please try that.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
+  - user: |
+      At last. Thank you so much. Before I let you go, can you tell me the restaurant's user rating?
+    intent: ReserveRestaurant_REQUEST
+  - action: utter_inform
+  - user: |
+      Are there any vegetarian dishes available at that restaurant?
+    intent: ReserveRestaurant_REQUEST
+  - action: utter_inform
+  - user: |
+      That's alright. Thanks for the information.
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      Not for now, thanks?
-    intent: Undefined
+      Oh nothing. Booking the table was all I needed. Thanks again.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_4
   steps:
   - user: |
-      I want to check events on my calendar for Thursday next week.
-    intent: GetEvents
-  - action: utter_offer
+      Can you book a reservation for a restaurant at this evening 5:30?
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - user: |
-      Do I have any other events scheduled?
-    intent: GetEvents
-  - action: utter_offer
+      See if you can get a table at Mi Zacatecas.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
   - user: |
-      Do I have other events scheduled?
-    intent: GetEvents
-  - action: utter_offer
+      It's in American Canyon.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Sounds good, when am I available?
-    intent: GetAvailableTime
-  - action: utter_offer
+      Confirm. Can you tell me what type of food they serve there?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_notify_success
   - user: |
-      Sounds good. That's all I need.
-    intent: GetAvailableTime
+      Great, that will be all.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_5
   steps:
   - user: |
-      What is happening March 9th on my calendar?
-    intent: GetEvents
-  - action: utter_offer
+      I need to book a table at a restaurant.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - user: |
-      Is anything else scheduled?
-    intent: GetEvents
-  - action: utter_offer
+      I want it at 1:15 in the afternoon, please.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
+  - action: utter_request
   - user: |
-      Okay. When should I be available?
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      I need a table at Saap Ver, in San Francisco.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Okay. That is all.
-    intent: GetAvailableTime
+      Yes, that is everything. Address?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_failure
+  - action: utter_req_more
+  - user: |
+      No, but thanks.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_6
   steps:
   - user: |
-      Can you help me check my calendar for events?
-    intent: GetEvents
+      I'm looking to book a table. Can you try Triptych in SF?
+    intent: ReserveRestaurant_INFORM_INTENT
   - action: utter_request
   - user: |
-      Please check 10th of March.
-    intent: GetEvents
+      Give me 6:15 in the evening please.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      No, wrong. Give me Friday next week instead.
+    intent: ReserveRestaurant_NEGATE
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      No, one more time. One person.
+    intent: ReserveRestaurant_NEGATE
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      Yes, that's a winner thanks. Do they have vegetarian options?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
   - action: utter_offer
-  - user: |
-      Do I have any events scheduled on March 9th?
-    intent: GetEvents
-  - action: utter_inform_count
-  - user: |
-      Is there anything else on the schedule?
-    intent: GetEvents
   - action: utter_offer
-  - user: |
-      Great, can you show me my availability now?
-    intent: GetAvailableTime
   - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
   - user: |
-      Great!
-    intent: GetAvailableTime
-  - action: utter_req_more
-  - user: |
-      Not now, thanks for checking for me.
-    intent: Undefined
+      No, that will not do.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_7
   steps:
   - user: |
-      Can you check my events calendar for the 3rd of this month?
-    intent: GetEvents
-  - action: utter_offer
+      I would like to make a reservation at a restaurant for half past 1 in the afternoon.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - user: |
-      Anything else?
-    intent: GetEvents
-  - action: utter_offer
+      I would like a table at Left Bank.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
   - user: |
-      Okay. When am I available?
-    intent: GetAvailableTime
-  - action: utter_offer
+      I would like a restaurant in Larkspur.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      That sounds good.
-    intent: GetAvailableTime
-  - action: utter_req_more
+      Yes, that reservation is good.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
   - user: |
-      No. Thank you.
-    intent: Undefined
+      Thank you for your assistance.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_8
   steps:
   - user: |
-      I want do double check my events for next Thursday.
-    intent: GetEvents
-  - action: utter_inform_count
+      I need to make a reservation for a restaurant in Oakland. The reservation should be for next Wednesday at 6:45 pm.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - user: |
-      Any other events?
-    intent: GetEvents
-  - action: utter_offer
+      Can you book me a table at Mcdonald's?
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Thanks, show me when I have free time.
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      That is correct. How expensive is the restaurant and does it have outdoor seating?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_inform
+  - action: utter_notify_success
   - user: |
-      Great thanks!
-    intent: GetAvailableTime
+      Thank you.
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      Nope, thank you so much!
-    intent: Undefined
+      No thanks.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_9
   steps:
   - user: |
-      I'm trying to schedule an appointment, can you check the events on my calendar?
-    intent: GetEvents
+      I want to make a restaurant reservation.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      Check on the 6th of March.
-    intent: GetEvents
-  - action: utter_inform_count
+      It's name is La Hacienda and I want the reservation for 2 o"clock in the afternoon.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
   - user: |
-      How about the 9th of this month?
-    intent: GetEvents
-  - action: utter_offer
+      It's in Cloverdale.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Is that the only event scheduled?
-    intent: GetEvents
-  - action: utter_offer
+      Yeah,that's good. What's the user rating of the restaurant?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_failure
+  - action: utter_req_more
   - user: |
-      Okay, when am I available to schedule an appointment?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Am I free any other time?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Alright that works, thanks for your help.
-    intent: GetAvailableTime
+      No, thanks a lot.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_10
   steps:
   - user: |
-      Do I have anything in my calendar for March 12th?
-    intent: GetEvents
-  - action: utter_inform_count
+      I am trying to book a dinner reservation in San Fran for one. Can you try booking a table at Lers Ros?
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - user: |
-      Sounds good. What times am I available on that day?
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      If you could, please make the reservation for 12:15 in the afternoon.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Sounds good.
-    intent: GetAvailableTime
-  - action: utter_req_more
+      That will work just fine.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
   - user: |
-      No, that's all.
-    intent: Undefined
+      No that's all the help I needed. Thanks.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_11
   steps:
   - user: |
-      Can you please check my calendar events for March 7th?
-    intent: GetEvents
+      I want to book a table at a restaurant in Danville please
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
+  - user: |
+      Yeah actually, can you try Lotus for me
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
+  - user: |
+      Let's do it before lunch at 11:45
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      Yes that's all correct
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_offer
-  - user: |
-      Anything else scheduled for Wednesday next week?
-    intent: GetEvents
   - action: utter_offer
-  - user: |
-      OK, got it. Please tell me when I'm available.
-    intent: GetAvailableTime
-  - action: utter_inform_count
-  - user: |
-      Any other available time?
-    intent: GetAvailableTime
   - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
   - user: |
-      OK, got it.
-    intent: GetAvailableTime
-  - action: utter_req_more
+      Yes please do that
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
   - user: |
-      No, that will be all.
-    intent: Undefined
+      Is it cheap over there? Also give me their address
+    intent: ReserveRestaurant_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      OK, thanks that's it for now
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_12
   steps:
   - user: |
-      Please tell me about the events on my calendar.
-    intent: GetEvents
+      My boss from headquarters is coming to town and I would like to treat him and his wife to dinner. Can you help me find a restaurant in San Francisco with available seating for four people, next Tuesday?
+    intent: ReserveRestaurant_INFORM_INTENT
   - action: utter_request
   - user: |
-      Please tell me what events are on next Wednesday.
-    intent: GetEvents
-  - action: utter_inform_count
+      Yes, a general dinner time is fine, so let's try to book a table for 6:30 pm.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
   - user: |
-      Please tell me what events are scheduled for March 9th.
-    intent: GetEvents
-  - action: utter_inform_count
+      Yes, I'm told that Aq is very good. Let's try that one first.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Thank you. Please tell me when I am free.
-    intent: GetAvailableTime
-  - action: utter_offer
+      No, I'm sorry, I forgot he is not bring his wife so lets book a table for 3 at Ming's instead.
+    intent: ReserveRestaurant_NEGATE
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Thank you, that's all.
-    intent: GetAvailableTime
+      Perfect, and can you also tell me the the establishment's rating as well?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_notify_success
+  - user: |
+      Great, I believe that will be all fr now. Thanks!
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_13
   steps:
   - user: |
-      Hello, I want to check the events occurring on the date of the 11th of March on my calendar.
-    intent: GetEvents
-  - action: utter_offer
+      Help me to find hotel in Petaluma to book a table at evening 7:30.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - user: |
-      Do I have any other events scheduled that day?
-    intent: GetEvents
-  - action: utter_offer
+      yeah, get me at Cattlemens.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Do I have any other items scheduled on the 1st of March?
-    intent: GetEvents
-  - action: utter_inform_count
+      Good, thats all.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
   - user: |
-      Sounds good. Please let me know when I am available.
-    intent: GetAvailableTime
-  - action: utter_offer
+      Shall I get veg food there. What is their phone number?
+    intent: ReserveRestaurant_REQUEST
+  - action: utter_inform
+  - action: utter_inform
   - user: |
-      Sounds good, thank you. That is all I need.
-    intent: GetAvailableTime
+      Great service, thank you.
+    intent: ReserveRestaurant_THANK_YOU
+  - action: utter_req_more
+  - user: |
+      No, thats all.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_14
   steps:
   - user: |
-      Can you check my calendar for events?
-    intent: GetEvents
+      Can you help me book a table at Thai Chili on March 11th? Please find restaurants in Santa Clara.
+    intent: ReserveRestaurant_INFORM_INTENT
   - action: utter_request
   - user: |
-      I am checking for the 7th
-    intent: GetEvents
+      I want 5:45 in the evening.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      Yes, that's good.
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_offer
-  - user: |
-      Do I have any other events this Sunday?
-    intent: GetEvents
   - action: utter_offer
-  - user: |
-      Sounds good, when am I available?
-    intent: GetAvailableTime
-  - action: utter_inform_count
-  - user: |
-      Any other times I'm available?
-    intent: GetAvailableTime
   - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
   - user: |
-      Great, that's all, thanks
-    intent: GetAvailableTime
+      Yes, that's fine.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
+  - user: |
+      Thanks a lot.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_15
   steps:
   - user: |
-      I would like to see the events on my calendar and more specifically for the 8th of this month.
-    intent: GetEvents
-  - action: utter_inform_count
+      Could you look at restaurants for me to reserve a table?
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
+  - action: utter_request
   - user: |
-      Are there other events which I have scheduled for the 1st of this month?
-    intent: GetEvents
-  - action: utter_inform_count
+      How about Chianti Cucina in Novato.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
   - user: |
-      Seems great. Tell me when I will be available.
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      For 4:45 pm please.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Seems great.
-    intent: GetAvailableTime
-  - action: utter_req_more
+      Yes, perfect. Book it please. Is there any outdoor seating there? What kinds of foods do they have?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_inform
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
   - user: |
-      Nothing. I appreciate your help.
-    intent: Undefined
+      Yes please.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
+  - user: |
+      Thanks so much. That's all.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_16
   steps:
   - user: |
-      Shelly, check upcoming events on my calendar.
-    intent: GetEvents
+      I want to book a table for 4 people on March 10th in Petaluma.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      Check events for next Wednesday.
-    intent: GetEvents
-  - action: utter_offer
+      Try please at Izakaya Kitaru.At 17:30 will be very good for me.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Shelly, are any other events scheduled for that day?
-    intent: GetEvents
-  - action: utter_offer
+      Yes is okay.Outdoor seating are available?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_notify_success
   - user: |
-      What events are scheduled for the 12th of March.
-    intent: GetEvents
-  - action: utter_offer
+      Tell me the phone number and the address.
+    intent: ReserveRestaurant_REQUEST
+  - action: utter_inform
+  - action: utter_inform
   - user: |
-      Shelly, show me times I'm available that day.
-    intent: GetAvailableTime
-  - action: utter_inform_count
-  - user: |
-      What are my available afternoon slots?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Thanks, Shelly.
-    intent: GetAvailableTime
-  - action: utter_req_more
-  - user: |
-      No, that's all I needed to know.
-    intent: Undefined
+      Thanks for the help. That's what I wanted for the moment.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_17
   steps:
   - user: |
-      Which events are on my calendar Monday next week?
-    intent: GetEvents
-  - action: utter_inform_count
+      Can you book a table at a restaurant for me?
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
+  - action: utter_request
   - user: |
-      What else is on my schedule the 3rd?
-    intent: GetEvents
-  - action: utter_inform_count
+      I am looking for restaurants in Mountain View for the reservation at seven pm.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
   - user: |
-      When am I available, please.
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      I would like to go with Sushi 85.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Is there any other free time?
-    intent: GetAvailableTime
-  - action: utter_offer
+      Okay, That sounds great! Find me the address please.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_notify_success
   - user: |
-      Thanks.
-    intent: GetAvailableTime
+      Can you find me their phone number?
+    intent: ReserveRestaurant_REQUEST
+  - action: utter_inform
+  - user: |
+      Okay, Thank you for the help!
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      No.
-    intent: Undefined
+      No. That will be all. Thank you!
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_18
   steps:
   - user: |
-      Hey, I'd like to see what I'm doing on March 5th. Can you check my calendar?
-    intent: GetEvents
-  - action: utter_offer
+      I need to reserve a table at a restaurant in SF for 7 pm.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - user: |
-      Oh great, thanks. When am I available that day?
-    intent: GetAvailableTime
-  - action: utter_offer
+      Can you reserve a table at Regent?
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Fantastic. That's all.
-    intent: GetAvailableTime
+      That is correct.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
+  - user: |
+      Thanks, that is all.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_19
   steps:
   - user: |
-      I'd like to check on some events in my calendar.
-    intent: GetEvents
+      I'd like to make a reservation at a restaurant.
+    intent: ReserveRestaurant_INFORM_INTENT
   - action: utter_request
   - user: |
-      It is the 8th of March.
-    intent: GetEvents
-  - action: utter_inform_count
+      It's a restaurant called Amalfi, please try that.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
+  - action: utter_request
   - user: |
-      Thanks! I'd like to see when I have time available.
-    intent: GetAvailableTime
-  - action: utter_offer
+      I want it for 5:30 in the evening and it should be in Larkspur.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      That sounds great!
-    intent: GetAvailableTime
-  - action: utter_req_more
+      Yeah, that sounds awesome.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
   - user: |
-      Nope, thanks for your help!
-    intent: Undefined
+      Thanks a lot. That's it for now.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_20
   steps:
   - user: |
-      I need to know the events on my calendar.
-    intent: GetEvents
+      Can you help me to book a table at a restaurant for 2 people at evening 6:30
+    intent: ReserveRestaurant_INFORM_INTENT
   - action: utter_request
   - user: |
-      I need to know the events on the 1st of March.
-    intent: GetEvents
-  - action: utter_offer
+      Would you kindly book the table at Mcdonalds?
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
   - user: |
-      Great, when am I free?
-    intent: GetAvailableTime
-  - action: utter_offer
+      Search restaurants in Morgan Hill and it is for next monday
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Perfect, thank you.
-    intent: GetAvailableTime
-  - action: utter_req_more
+      Okay..this is cool
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
   - user: |
-      That is all I need, thank you.
-    intent: Undefined
+      Is there outdoor seating in that restaurant and can i know the phone number
+    intent: ReserveRestaurant_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      This is cool..thanks a lot.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_21
   steps:
   - user: |
-      I want to check what events are coming up on my calendar.
-    intent: GetEvents
+      I would like to reserve a table for 1 at La Briciola tomorrow morning 11.
+    intent: ReserveRestaurant_INFORM_INTENT
   - action: utter_request
   - user: |
-      Next Wednesday.
-    intent: GetEvents
-  - action: utter_inform_count
+      Search in SFO, please.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Great. Tell me when I am available.
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      No, please make it a table for 3.
+    intent: ReserveRestaurant_NEGATE
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Are there any other available times?
-    intent: GetAvailableTime
+      Yes, that sounds great. What type of food do they serve?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
   - action: utter_offer
-  - user: |
-      Are there any other available times?
-    intent: GetAvailableTime
   - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
   - user: |
-      Great. That is all I needed to know.
-    intent: GetAvailableTime
+      That sounds fine.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
+  - user: |
+      Thank you, I'm all set.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_22
   steps:
   - user: |
-      What do I have for events on my calendar for the 7th of March?
-    intent: GetEvents
-  - action: utter_inform_count
+      Can you find me a restaurant table for 3 people in Alameda, please?
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - user: |
-      Do I have any other events scheduled on March 10th?
-    intent: GetEvents
-  - action: utter_offer
+      I'd like it for 11:30 in the morning on March 13th. It'll just be one person dining.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
   - user: |
-      Any other events Scheduled?
-    intent: GetEvents
-  - action: utter_offer
+      How about Cafe Jolie?
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Thanks. Tell me when I am available.
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      Yes, that's perfect.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
   - user: |
-      Any other times?
-    intent: GetAvailableTime
-  - action: utter_offer
+      Thank you very much!
+    intent: ReserveRestaurant_THANK_YOU
+  - action: utter_req_more
   - user: |
-      Thanks. I am all set.
-    intent: GetAvailableTime
+      Yes, that's everything for today.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_23
   steps:
   - user: |
-      I want to see events on my calendar later today.
-    intent: GetEvents
-  - action: utter_offer
+      Looking to book a table at the Academy bar?
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
+  - action: utter_request
   - user: |
-      Perfect. Let me know when I'm available.
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      Find in San Fran at 19:00
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Is there any other available time.
-    intent: GetAvailableTime
-  - action: utter_offer
+      Yes, thats right
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
   - user: |
-      Perfect.
-    intent: GetAvailableTime
+      Any vegetarian options there?
+    intent: ReserveRestaurant_REQUEST
+  - action: utter_inform
+  - user: |
+      thanks a lot
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      No. Thanks.
-    intent: Undefined
+      no, thanks again
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_24
   steps:
   - user: |
-      I would like to check any events on my calendar, please.
-    intent: GetEvents
+      I need to book a table at a nice restaurant.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
+  - action: utter_request
   - action: utter_request
   - user: |
-      I'd like to know what is on the 6th of this month, please.
-    intent: GetEvents
+      I kinda want to eat at Namu Gaji at one pm, the branch in SFO
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      Yup that's right. Can you check how pricey it is and what their user rating is?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_inform
   - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
   - user: |
-      Ok, great. Can you tell me when I'm available?
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      No, I'm not available then
+    intent: ReserveRestaurant_NEGATE
+  - action: utter_req_more
   - user: |
-      Thank you, that sounds great. That is all I need to know.
-    intent: GetAvailableTime
+      No, not right now, thanks for your assistance
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_25
   steps:
   - user: |
-      I'd like to check my calendar.
-    intent: GetEvents
+      I want to reserve a restaurant table for 1 at 1 in the afternoon.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      Do I have anything on the 5th?
-    intent: GetEvents
-  - action: utter_offer
+      I'd like a table at Yin Keng. Look in Windsor.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Got it. Do I have anything on the 14th of this month?
-    intent: GetEvents
-  - action: utter_inform_count
+      That's it. Do they have vegetarian meals? Where is the restaurant?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_inform
+  - action: utter_notify_success
   - user: |
-      Okay, what else do I have?
-    intent: GetEvents
-  - action: utter_offer
-  - user: |
-      That sounds good.
-    intent: GetEvents
+      Thanks for your help.
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      When am I available on that day?
-    intent: GetAvailableTime
-  - action: utter_inform_count
-  - user: |
-      That works, thank you. I don't need anything else.
-    intent: GetAvailableTime
+      No, that is all.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_26
   steps:
   - user: |
-      I would like to check if I have any events on my calendar next Monday.
-    intent: GetEvents
-  - action: utter_inform_count
+      Please book one table at Tandoori Mahal at 12:30 in the afternoon. The date is 13th of this month.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - user: |
-      Alright. Is there anything I have going on next Tuesday?
-    intent: GetEvents
-  - action: utter_inform_count
+      I am looking for one in San Francisco.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Anything else going on?
-    intent: GetEvents
-  - action: utter_offer
+      Fine, what about food category.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_notify_success
   - user: |
-      Okay, sounds like a plan. What time blocks do I have nothing going on?
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      Get me their phone number. What is their rating?
+    intent: ReserveRestaurant_REQUEST
+  - action: utter_inform
+  - action: utter_inform
   - user: |
-      Great, thank you. That should do it for now.
-    intent: GetAvailableTime
+      Good service, thank you.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_27
   steps:
   - user: |
-      I want to see what events are on my calendar.
-    intent: GetEvents
+      I want to have a table booked for me at a restaurant, because I want to have a meal.
+    intent: ReserveRestaurant_INFORM_INTENT
   - action: utter_request
   - user: |
-      I want to see March 11th.
-    intent: GetEvents
-  - action: utter_inform_count
+      Can you check if you can make a booking of a table at Castle Rock?
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
   - user: |
-      Are there other events?
-    intent: GetEvents
-  - action: utter_offer
+      I prefer to have the booking be made for 12:00.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
   - user: |
-      What are the other events for the 12th of March.
-    intent: GetEvents
-  - action: utter_offer
+      I am interested in restaurants which are located in Livermore.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Perfect. Tell me when I'm available.
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      That is not right. Could you please see if you can make a booking at Mcdonald's?
+    intent: ReserveRestaurant_NEGATE
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Thanks. That's all.
-    intent: GetAvailableTime
+      I don't want that either. See if you can find me restaurants in Pittsburg.
+    intent: ReserveRestaurant_NEGATE
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      Yes that suits me well. Could you inform me about the fact how expensive is the restaurant?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_notify_success
+  - user: |
+      I appreciate it very much. That would be all.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_28
   steps:
   - user: |
-      Hey, I'd like you to check my calendar. What am I doing on the 11th?
-    intent: GetEvents
-  - action: utter_offer
+      I'd like to book a table for 1 this sunday somewhere in half moon bay.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
+  - action: utter_request
   - user: |
-      Thanks. Am I doing anything on March 4th?
-    intent: GetEvents
-  - action: utter_offer
+      Could you find something at Miramar Beach, quarter past 11 in the morning?
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Okay thanks. When am I available on the 4th?
-    intent: GetAvailableTime
+      Exactly. What is their address, and what's the user rating?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_inform
   - action: utter_offer
-  - user: |
-      Any other available times?
-    intent: GetAvailableTime
   - action: utter_offer
-  - user: |
-      Is there anything else?
-    intent: GetAvailableTime
   - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
   - user: |
-      Sounds great.
-    intent: GetAvailableTime
+      Yes.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
+  - user: |
+      Thank you so much.
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      No thanks. That's all.
-    intent: Undefined
+      Nope! Thank you!
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_29
   steps:
   - user: |
-      I am very busy in my day-to-day work. Will you please check whether any events on my calendar?
-    intent: GetEvents
+      I would like to take this girl I like out for a casual meal on the 3rd of this month, when I get paid so something around eleven am would be perfect. Can you help me locate a restaurant in Palo Alto?
+    intent: ReserveRestaurant_INFORM_INTENT
   - action: utter_request
   - user: |
-      I prefer 6th of this month.
-    intent: GetEvents
-  - action: utter_inform_count
+      Yes, I've heard really good things about a restaurant called Lotus.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      whether any other events scheduled in any other date i meant 8th of March?
-    intent: GetEvents
-  - action: utter_inform_count
-  - user: |
-      well that's great to hear from you. Please find any empty slots available this month.
-    intent: GetAvailableTime
-  - action: utter_inform_count
-  - user: |
-      whether i have any other available time other than 8 am to 12 pm?
-    intent: GetAvailableTime
+      Yes everything you have is correct.
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
   - user: |
-      That's great and now i am aware of all my events and my available time. Thanks.
-    intent: GetAvailableTime
+      No, that won't work but thank you any way.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_30
   steps:
   - user: |
-      I want to check the events on my calendar for the 2nd.
-    intent: GetEvents
-  - action: utter_offer
+      I want to make a restaurant reservation somewhere please.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - user: |
-      Do I have any other events scheduled on the day after tomorrow?
-    intent: GetEvents
-  - action: utter_offer
+      I am in Palo Alto.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
   - user: |
-      Do I have other events scheduled?
-    intent: GetEvents
-  - action: utter_offer
+      Yes, Anatolian please for 3 people, if you would.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
   - user: |
-      Sounds good. Please show me when I am available.
-    intent: GetAvailableTime
-  - action: utter_offer
+      Would you try for 12:30?
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Do I have any other available time?
-    intent: GetAvailableTime
-  - action: utter_offer
+      Oops, please change that to one person.
+    intent: ReserveRestaurant_NEGATE
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Sounds good.
-    intent: GetAvailableTime
+      Okay, thanks. I'm wondering if they have vegetarian choices on their menu. Also, what kind of menu do they have in general?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_inform
+  - action: utter_notify_success
+  - user: |
+      Wonderful. Thank you for helping me.
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      No. Thank you for your help.
-    intent: Undefined
+      No, that's all I needed.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_31
   steps:
   - user: |
-      What events do I have on the 13th?
-    intent: GetEvents
-  - action: utter_offer
+      Hi there, could you get me a table at a restaurant on the 14th of March at 1:30 pm please?
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
   - user: |
-      Great, when am I available?
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      Could you get me a reservation at Schroeder's please?
+    intent: ReserveRestaurant_INFORM
+  - action: utter_request
   - user: |
-      Is there any other times?
-    intent: GetAvailableTime
-  - action: utter_offer
+      A table for two at San Francisco will be fine.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Great, that's all.
-    intent: GetAvailableTime
+      That sounds great to me!
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
+  - user: |
+      Thank you so much!
+    intent: ReserveRestaurant_THANK_YOU
+  - action: utter_req_more
+  - user: |
+      No, that is all I need. Really appreciate it!
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_32
   steps:
   - user: |
-      I want to check my calender for events. The date I want to look into is the 12th of March.
-    intent: GetEvents
+      I'm looking for a restaurant, can you help?
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
+  - action: utter_request
+  - user: |
+      Check in the San Jose area. I'd like to find a place that serves Diner style food.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Are there any other events scheduled for me? What about the 13th?
-    intent: GetEvents
-  - action: utter_inform_count
+      Great! can you make a reservation for one on Saturday this week?
+    intent: ReserveRestaurant_SELECT
+  - action: utter_request
   - user: |
-      Okay, sounds good! What days are available?
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      For lunch at 12 in the afternoon.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Alrighty, perfect. That's all I need to know.
-    intent: GetAvailableTime
+      On second thought, make it for Tuesday next week.
+    intent: ReserveRestaurant_NEGATE
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      Yes. Also see if they have outdoor seating and what their rating is.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_inform
+  - action: utter_notify_success
+  - user: |
+      Great! Thank you.
+    intent: ReserveRestaurant_THANK_YOU
+  - action: utter_req_more
+  - user: |
+      No, thank you. I'm good for now.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_33
   steps:
   - user: |
-      What events are on my calendar for the 14th of this month?
-    intent: GetEvents
+      Can you help me find a place to eat?
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
+  - user: |
+      I'm interested in Napa.
+    intent: FindRestaurants_INFORM
+  - action: utter_request
+  - user: |
+      Yes, I'm interested in Japanese.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Great!
-    intent: GetEvents
-  - action: utter_req_more
-  - user: |
-      When does my calendar show I am free?
-    intent: GetAvailableTime
+      Are there any others you can recommend?
+    intent: FindRestaurants_REQUEST_ALTS
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Do I have any other free time?
-    intent: GetAvailableTime
+      Can you give me their phone number please?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - user: |
+      Can you give me their user rating and tell me if they have any outdoor seating?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      Are there any other restaurants you can recommend that have vegetarian options?
+    intent: FindRestaurants_REQUEST_ALTS
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Perfect.
-    intent: GetAvailableTime
-  - action: utter_req_more
+      That sounds good! I am looking to book a table on the 3rd.
+    intent: ReserveRestaurant_SELECT
+  - action: utter_request
   - user: |
-      That is all, thanks.
-    intent: Undefined
+      I am thinking evening 4:45.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      Yes, that is correct!
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
+  - user: |
+      Thank you, that is all I need for now.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_34
   steps:
   - user: |
-      Can you help me check which events are on my calendar?
-    intent: GetEvents
+      Think you could find me a place to eat?
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      1st of March, please.
-    intent: GetEvents
+      Find me a place that serves burgers in San Jose and you will be my hero.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
   - action: utter_inform_count
   - user: |
-      That sounds good.
-    intent: GetEvents
+      Wow, that sounds delicious. What's their phone number?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - user: |
+      Great, thanks.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
+  - user: |
+      Yes, I would.
+    intent: ReserveRestaurant_AFFIRM_INTENT
+  - action: utter_request
+  - user: |
+      Make the reservation for 3. No, actually, make it for a quarter past 5 in the evening.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      Yes that is all correct. Can you tell me the restaurants user rating and address?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_inform
+  - action: utter_notify_success
+  - user: |
+      Great. Thank you very much for your help.
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      Can you show me my availability?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Sounds good to me.
-    intent: GetAvailableTime
-  - action: utter_req_more
-  - user: |
-      No, thank you.
-    intent: Undefined
+      For now, yes. I'll let you know if I need anything further.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_35
   steps:
   - user: |
-      I want to check my calendar events.
-    intent: GetEvents
+      I'm looking for a restaurant that serves Oriental food.
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      Check the 7th of this month.
-    intent: GetEvents
-  - action: utter_inform_count
-  - user: |
-      Do I have other events scheduled on the 9th of March?
-    intent: GetEvents
+      Find a restaurant in SFO.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Sounds good. Show me when I am available.
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      Yes, that sounds good. I'd like to make a reservation for 3 people today at 1 pm.
+    intent: ReserveRestaurant_SELECT
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Sounds good. That is all I need.
-    intent: GetAvailableTime
+      Yes, that is right.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
+  - user: |
+      Thank you!
+    intent: ReserveRestaurant_THANK_YOU
+  - action: utter_req_more
+  - user: |
+      No, thank you.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_36
   steps:
   - user: |
-      What's on my calendar?
-    intent: GetEvents
+      I need help searching for a place to eat.
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      Monday next week.
-    intent: GetEvents
+      I want to look for Korean Barbeque in SFO.
+    intent: FindRestaurants_INFORM
   - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
   - user: |
-      Are there any other events for that day?
-    intent: GetEvents
+      Is there outdoor seating? And what's their user rating?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      Okay, that can work. Please book me a table.
+    intent: ReserveRestaurant_SELECT
+  - action: utter_request
+  - user: |
+      I want it for half past 10 in the morning.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      That is right.
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_notify_failure
+  - action: utter_req_more
   - user: |
-      What's on my schedule for the 14th of this month?
-    intent: GetEvents
-  - action: utter_offer
+      Can we try for a table at 7 pm?
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      That's good. Tell me when I'm available.
-    intent: GetAvailableTime
-  - action: utter_offer
+      That is right.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
   - user: |
-      Thank you. That's all for now.
-    intent: GetAvailableTime
+      Thanks a lot.
+    intent: ReserveRestaurant_THANK_YOU
+  - action: utter_req_more
+  - user: |
+      Nothing else, thanks a lot.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_37
   steps:
   - user: |
-      I want to check my calendar for events on the 9th of this month.
-    intent: GetEvents
+      Will you please help me find a good, reasonably priced place to eat in San Jose?
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
+  - user: |
+      I think I'm in the mood for Cantonese.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Do I have anything else on the 8th of March.
-    intent: GetEvents
+      Okay. How about some other suggestions?
+    intent: FindRestaurants_REQUEST_ALTS
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Any other events scheduled?
-    intent: GetEvents
+      That's possible. But what else is there?
+    intent: FindRestaurants_REQUEST_ALTS
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Ok, sounds good.
-    intent: GetEvents
+      Can you let me know what their user rating is? I'm also wondering if they have seating outdoors.
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      Okay, sounds good. Let's book a table for 4 please in the evening 5:30.
+    intent: ReserveRestaurant_SELECT
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      Okay, sounds like you got it all!
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
+  - user: |
+      Thanks for all your help today.
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      When am I available?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Is there any other time available?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Ok sounds good.
-    intent: GetAvailableTime
-  - action: utter_req_more
-  - user: |
-      No, thank you so much.
-    intent: Undefined
+      I don't think so. Thanks again.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_38
   steps:
   - user: |
-      I want to check my schedule for March 13th.
-    intent: GetEvents
+      I need help finding somewhere to eat.
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
+  - action: utter_request
+  - user: |
+      I want a Barbecue place in San Fran.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Are there any other scheduled events?
-    intent: GetEvents
-  - action: utter_notify_failure
-  - user: |
-      Can you check my schedule for the 12th?
-    intent: GetEvents
+      What else is there?
+    intent: FindRestaurants_REQUEST_ALTS
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Sounds good. Can you show me my available times?
-    intent: GetAvailableTime
-  - action: utter_inform_count
+      Can you give me their phone number?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
   - user: |
-      Are there other available times?
-    intent: GetAvailableTime
-  - action: utter_offer
+      And what is their user rating?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
   - user: |
-      Are there other available times?
-    intent: GetAvailableTime
-  - action: utter_offer
+      Alright, that seems good.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
   - user: |
-      Thanks, that's all I needed.
-    intent: GetAvailableTime
+      Yes, please do that.
+    intent: ReserveRestaurant_AFFIRM_INTENT
+  - action: utter_request
+  - user: |
+      I want it for 7:15 pm.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      No, it should be a table for 4 and for seven pm.
+    intent: ReserveRestaurant_NEGATE
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      Yes. And can you tell me their address?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_notify_success
+  - user: |
+      Thanks a lot.
+    intent: ReserveRestaurant_THANK_YOU
+  - action: utter_req_more
+  - user: |
+      No, thanks again.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_39
   steps:
   - user: |
-      Please help me check the event o nmy calendar.
-    intent: GetEvents
+      Can you find me a Ramen restaurant?
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      Please check the date next Friday.
-    intent: GetEvents
+      I'd like something in Belmont.
+    intent: FindRestaurants_INFORM
   - action: utter_offer
-  - user: |
-      How about this Sunday, do I have an appointment on that day?
-    intent: GetEvents
+  - action: utter_offer
   - action: utter_inform_count
   - user: |
-      Do I have other schedule?
-    intent: GetEvents
-  - action: utter_offer
+      That sounds great. Can you reserve me a table? How about the 9th of March at 5:30 in the evening?
+    intent: ReserveRestaurant_SELECT
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Okay, thanks!
-    intent: GetEvents
+      That's correct. Do you have their address?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_notify_success
+  - user: |
+      Thank you very much!
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      When will I be available?
-    intent: GetAvailableTime
-  - action: utter_inform_count
-  - user: |
-      How about other time?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Okay, thank you!
-    intent: GetAvailableTime
-  - action: utter_req_more
-  - user: |
-      No, thank you.
-    intent: Undefined
+      No, that'll be all, thanks!
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_40
   steps:
   - user: |
-      Can you check my schedule and see when I have an opening?
-    intent: GetAvailableTime
+      Please locate a nice restaurant in Petaluma for me.
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      I'd like to look at the 12th of March.
-    intent: GetAvailableTime
+      Yes. A Light meal would be perfect.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Can you check the 13th as well?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      That's great. Thanks.
-    intent: GetAvailableTime
+      Sounds like a good choice.
+    intent: FindRestaurants_SELECT
   - action: utter_offer_intent
   - user: |
-      Yes, Can you please add the Chris Webby concert? The event is being held at 2367 Shattuck Avenue.
-    intent: AddEvent
+      Please make a reservation.
+    intent: ReserveRestaurant_AFFIRM_INTENT
   - action: utter_request
   - user: |
-      It starts at half past 12 in the afternoon.
-    intent: AddEvent
+      I would like to book a table at 6:15 in the evening.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes, that's perfect.
-    intent: AddEvent
+      That is exactly what I want, thanks.
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_notify_success
   - user: |
-      Thank you so much for the assistance.
-    intent: AddEvent
+      Thanks a million.
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      Not at the moment. Thank you again.
-    intent: Undefined
+      Nothing right now, thanks.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_41
   steps:
   - user: |
-      Can you please check my calendar and tell me when am I available?
-    intent: GetAvailableTime
+      Can you find me some Cambodian restaurants that serve vegetarian food?
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      Please check for Monday next week.
-    intent: GetAvailableTime
+      Search around Fairfax.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Any other empty time slot for the 9th of this month?
-    intent: GetAvailableTime
+      Can you recommend me some Barbecue restaurants in SF?
+    intent: FindRestaurants_REQUEST_ALTS
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      OK. I'd like to add an event.
-    intent: AddEvent
+      That sounds good. I need to book a table.
+    intent: ReserveRestaurant_SELECT
   - action: utter_request
   - user: |
-      The event is Dentist appointment at 9:30 in the morning.
-    intent: AddEvent
-  - action: utter_request
-  - user: |
-      Sure. It's 17705 Hale Avenue.
-    intent: AddEvent
+      Make it for evening 7:30.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes, that's correct.
-    intent: AddEvent
+      Yes. How expensive is the restaurant?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
   - action: utter_notify_success
   - user: |
-      Thanks a lot for everything, that will be all.
-    intent: AddEvent
+      Thank you very much.
+    intent: ReserveRestaurant_THANK_YOU
+  - action: utter_req_more
+  - user: |
+      No. Thank you.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_42
   steps:
   - user: |
-      When am I available?
-    intent: GetAvailableTime
+      Can you please help me find a place to eat?
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      The day is next Thursday
-    intent: GetAvailableTime
+      Please find restaurants in Santa Clara.
+    intent: FindRestaurants_INFORM
+  - action: utter_request
+  - user: |
+      Please find something serving Latin American food.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Ok, It's good. Add an event, please
-    intent: AddEvent
+      What is there phone number?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - user: |
+      Yes, that sounds good.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
+  - user: |
+      Yes please, reserve a table.
+    intent: ReserveRestaurant_AFFIRM_INTENT
   - action: utter_request
   - user: |
-      Baseball game, at 1 East 161 Street in the afternoon 12
-    intent: AddEvent
+      Please make the reservation at 5:30 in the evening.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes, I confirm.
-    intent: AddEvent
+      Yes, that is correct. Do they have vegetarian options on the menu, and what is their user rating?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_inform
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
+  - user: |
+      Yes, that works.
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_notify_success
   - user: |
-      Thank you so much
-    intent: AddEvent
-  - action: utter_req_more
-  - user: |
-      No, thanks, It's all
-    intent: Undefined
+      Thank you very much, that is all I need for now.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_43
   steps:
   - user: |
-      I finally have time to do some more planning for my trip. I'm absolutely determined to get my calendar updated today. Would you spend a few minutes with me now, please, so I can know what time I have available on March 13th?
-    intent: GetAvailableTime
+      I want to find a restaurant please. I don't care about the price range.
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
+  - action: utter_request
+  - user: |
+      See if there's anything in Danville please with Southern food.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      What time slot do you show that's available on the 8th of this month?
-    intent: GetAvailableTime
-  - action: utter_offer
+      What kind of a customer rating do they have there?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
   - user: |
-      Cool. That's what I need.
-    intent: GetAvailableTime
+      Okay, how about the address and phone number?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      May I get some other recommendations from you? Maybe a place with patio dining, if possible, and somewhere that's reasonably priced.
+    intent: FindRestaurants_REQUEST_ALTS
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
+  - user: |
+      Oh, I think I would.
+    intent: FindRestaurants_SELECT
   - action: utter_offer_intent
   - user: |
-      Yes, please. Let's fill in that time range?
-    intent: AddEvent
+      I think you should, yes.
+    intent: ReserveRestaurant_AFFIRM_INTENT
   - action: utter_request
   - user: |
-      Let's add the label Leave for airport to that time range.
-    intent: AddEvent
-  - action: utter_request
-  - user: |
-      Yes, thanks for the reminder. Mark the location as SFO International Airport with the time being a quarter to 10 in the night.
-    intent: AddEvent
+      Let's shoot for 5:30 pm.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes, please confirm, and we're all set.
-    intent: AddEvent
+      Actually can you make it for a party of 3 please?
+    intent: ReserveRestaurant_NEGATE
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      Sorry, I also need to move that to the 14th please.
+    intent: ReserveRestaurant_NEGATE
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      Great, thanks. What is the address of the restaurant?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
   - action: utter_notify_success
   - user: |
-      Sweet. I'm much obliged, my dear.
-    intent: AddEvent
+      Thanks for taking care of that.
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      Nope, thank you and cheers.
-    intent: Undefined
+      No, I think I'm good.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_44
   steps:
   - user: |
-      Show me my free time?
-    intent: GetAvailableTime
+      I need a place to eat.
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      March 10th would be good.
-    intent: GetAvailableTime
+      Find me a Neapolitan restaurant in Cupertino.
+    intent: FindRestaurants_INFORM
   - action: utter_offer
-  - user: |
-      How about on the 9th?
-    intent: GetAvailableTime
   - action: utter_offer
+  - action: utter_inform_count
   - user: |
-      Thanks.
-    intent: GetAvailableTime
-  - action: utter_req_more
+      Can you get me the address and phone number?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - action: utter_inform
   - user: |
-      I need to add an event?
-    intent: AddEvent
+      Yes, that's good.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
+  - user: |
+      Yes, please. Reserve a table for four people.
+    intent: ReserveRestaurant_INFORM
   - action: utter_request
   - user: |
-      It starts at 2:15 pm.
-    intent: AddEvent
-  - action: utter_request
-  - user: |
-      Title it Restaurant reservation for 6 at Royal Rangoon Restaurant. It is located at 2826 Telegraph Avenue.
-    intent: AddEvent
+      Make it for morning 11:15 for 3 people.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes that sounds great.
-    intent: AddEvent
-  - action: utter_notify_success
+      Yes, that will work.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
   - user: |
-      Thanks.
-    intent: AddEvent
+      No, that's alright.
+    intent: ReserveRestaurant_NEGATE
   - action: utter_req_more
   - user: |
-      No that will be all.
-    intent: Undefined
+      No. Thank you very much.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_45
   steps:
   - user: |
-      I have to schedule an appointment on the 10th of this month. Can you show me my availability on that date?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Are there any other times I'm available?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Thank you.
-    intent: GetAvailableTime
-  - action: utter_offer_intent
-  - user: |
-      Yes, please add an event to my calendar.
-    intent: AddEvent
+      I'm really hungry, but on a budget. Could you please help me find restaurants with moderate prices, in Palo Alto?
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      The event is at 877 West Fremont Avenue Ste J2. It starts at 11 am. Put Appointment with Orthoworks Invisalign And Orthodontic Group for the title.
-    intent: AddEvent
+      Anything that serves Diner type food will do.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
+  - user: |
+      Great! I really like the sound of that. Please reserve me a table for 1 at that restaurant.
+    intent: ReserveRestaurant_SELECT
+  - action: utter_request
+  - user: |
+      Let it be a 12:30 in the afternoon reservation, please.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes, that's good.
-    intent: AddEvent
+      Yes, that is correct.
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_notify_success
   - user: |
-      Thank you, that's all I need.
-    intent: AddEvent
+      Thank you very much. You've been very helpful. That will be all.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_46
   steps:
   - user: |
-      What is my availability on March 4th?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      When am I available on March 8th?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Ok. That's perfect.
-    intent: GetAvailableTime
-  - action: utter_offer_intent
-  - user: |
-      Yes. Please create an event titled Baseball game at 14:00.
-    intent: AddEvent
+      Hello, I am looking for a place to eat. I am hoping to get take-out and for the restaurant to have vegetarian options.
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      The location is 401 East Jefferson Street.
-    intent: AddEvent
+      Please find restaurants in San Jose.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
+  - user: |
+      How is the pricing? Cheap or expensive?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - user: |
+      Do they have outdoor seating?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - user: |
+      Are there any other restaurants you can recommend?
+    intent: FindRestaurants_REQUEST_ALTS
+  - action: utter_offer
+  - action: utter_offer
+  - user: |
+      Yes, that will work. Can you please book a reservation for me? It will be for half past 11 in the morning.
+    intent: ReserveRestaurant_SELECT
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yep. That's right.
-    intent: AddEvent
+      Yes, that is correct. Are they not very costly?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
   - action: utter_notify_success
   - user: |
-      Thanks for your help.
-    intent: AddEvent
+      Thank you for your help!
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      No. Thanks. That's it.
-    intent: Undefined
+      No, that will be all. Thank you!
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_47
   steps:
   - user: |
-      When am I free on the 13th of this month?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Great
-    intent: GetAvailableTime
-  - action: utter_offer_intent
-  - user: |
-      Yes, add an event to my calendar
-    intent: AddEvent
+      I'm searching for location to dine at, preferably ones not very costly for cost. Get me one in San Mateo.
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      It's Soccer Game: Whitecaps vs Kansas City at 777 Pacific Boulevard. It starts at 09:00.
-    intent: AddEvent
+      Get me one that offers Oriental cuisine.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
+  - user: |
+      Yeah, that's fine with me.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
+  - user: |
+      Yeah, I'd like to book a spot there.
+    intent: ReserveRestaurant_AFFIRM_INTENT
+  - action: utter_request
+  - user: |
+      Book it for quarter to 2 in the afternoon.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes that's right
-    intent: AddEvent
+      Yeah, that's fine with me.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
+  - user: |
+      Yeah, that's fine with me.
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_notify_success
   - user: |
-      Thanks so much
-    intent: AddEvent
-  - action: utter_req_more
+      Does the diner offer outdoor seating? What is the contact number?
+    intent: ReserveRestaurant_REQUEST
+  - action: utter_inform
+  - action: utter_inform
   - user: |
-      Nope I'm good
-    intent: Undefined
+      Thank you for your help; that's all.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_48
   steps:
   - user: |
-      Can you tell me when my schedule is free for the day on the 11th?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Do I have other hours when I will be free for the March 14th?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      That seems nice.
-    intent: GetAvailableTime
-  - action: utter_offer_intent
-  - user: |
-      Actually yes! I am planning to do something and I would like to add it in my schedule.
-    intent: AddEvent
+      I have a plan to eat outside once and I need a nice restaurant for me. Can you search for the one in San Ramon?
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      I will be going for a meal out so make a Reservation at Lulu's Kitchen as a title for the event. The restaurant is located at 1657 Willow Pass Road and the time that it will happen is one pm.
-    intent: AddEvent
+      I want to eat some Pakistani food and search it accordingly.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
+  - user: |
+      Let me know their address to decide further.
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - user: |
+      That is okay for me. Can I get a table there?. Please book it for me now.
+    intent: ReserveRestaurant_SELECT
+  - action: utter_request
+  - user: |
+      Make it at evening 4:30.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      That seems great.
-    intent: AddEvent
-  - action: utter_notify_success
-  - user: |
-      I appreciate your help.
-    intent: AddEvent
+      That is confirmed and you can go ahead.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_failure
   - action: utter_req_more
   - user: |
-      Nothing. I am thankful for the help you gave me.
-    intent: Undefined
+      Please check it for another time that is 1:30 pm.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      That is confirmed. Please proceed.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
+  - user: |
+      That is nice and thank you so much.
+    intent: ReserveRestaurant_THANK_YOU
+  - action: utter_req_more
+  - user: |
+      No, nothing for now.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_49
   steps:
   - user: |
-      Can you show my availability on March 6th?
-    intent: GetAvailableTime
+      I'm trying to find a place to eat in Sunnyvale. Can you find me any afforadable Spicy Indian restaurants in the area?
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_offer
-  - user: |
-      Please check my availability on March 10th.
-    intent: GetAvailableTime
   - action: utter_offer
+  - action: utter_inform_count
   - user: |
-      That is fine. Mark this event in my calendar for my reference.
-    intent: AddEvent
+      Is this a good restaurant for vegetarians? What is their rating?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      Okay, this place sounds great. Let's go ahead and start booking a table.
+    intent: ReserveRestaurant_SELECT
   - action: utter_request
   - user: |
-      Make a note of that event in the name Appointment with Koppe Michael J and the time is 9 am at 5 Bon Air Rd # 114.
-    intent: AddEvent
+      I need a table for 2 on March 14th at 12:00.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes, that will be perfect.
-    intent: AddEvent
+      Yes, that's perfect. Also can I get their number?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
   - action: utter_notify_success
   - user: |
-      Thanks a lot.
-    intent: AddEvent
+      You you so much! I appreciate your help.
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      No, that's enough, thanks.
-    intent: Undefined
+      No thanks. That's all. Thanks again.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_50
   steps:
   - user: |
-      I'd like to see my availability.
-    intent: GetAvailableTime
+      Can you find a place for me to eat in Los Gatos?
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      I'm interested in the 5th of March.
-    intent: GetAvailableTime
+      Yes, try searching for Chinese.
+    intent: FindRestaurants_INFORM
   - action: utter_offer
-  - user: |
-      Do I have any availability on March 10th?
-    intent: GetAvailableTime
   - action: utter_offer
+  - action: utter_inform_count
   - user: |
-      Okay. I want to add an event to my calendar.
-    intent: AddEvent
-  - action: utter_request
-  - user: |
-      It is a Dentist appointment with Wirebenders at 2075 Lincoln Avenue # A.
-    intent: AddEvent
-  - action: utter_request
-  - user: |
-      It is scheduled at quarter past 2 in the afternoon.
-    intent: AddEvent
+      Great, can you make a reservation there next Tuesday at morning 11:30.
+    intent: ReserveRestaurant_SELECT
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes. Please go ahead.
-    intent: AddEvent
+      Yup, that's great. What's their rating an do they have outdoor seating?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_inform
   - action: utter_notify_success
   - user: |
-      Thank you for the assistance. That's all I need for now.
-    intent: AddEvent
+      Thanks, that's all for now.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_51
   steps:
   - user: |
-      Tell me when I'm available.
-    intent: GetAvailableTime
+      Find for me please a restaurant tagged affordable for price that have outdoor seating.I would like that Steakhouse to be served.
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      The 6th.
-    intent: GetAvailableTime
+      In Livermore will be okay.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Are there any other available slots on the 14th of this month?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      That sounds good.
-    intent: GetAvailableTime
-  - action: utter_offer_intent
-  - user: |
-      Yes I would like to add an event.
-    intent: AddEvent
+      Sounds very good.Book a table for 3 people.
+    intent: ReserveRestaurant_SELECT
   - action: utter_request
   - user: |
-      Use Table for 2 at Mcdonald's as the title. The location is 23989 Watkins Street.
-    intent: AddEvent
-  - action: utter_request
-  - user: |
-      The event time is evening 5:15.
-    intent: AddEvent
+      Try to make it at half past 1 in the afternoon.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes that works.
-    intent: AddEvent
+      Yes, very good.Tell me the user rating for this restaurant.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
   - action: utter_notify_success
   - user: |
-      Thank you for the help.
-    intent: AddEvent
+      Thank you for all.
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      No, thank you.
-    intent: Undefined
+      No.Thanks.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_52
   steps:
   - user: |
-      I'd like to see when I'm available on the 1st of March.
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Do I have any other space available on the 10th of March?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      That's great. Can you add an event at the Community gym into my calendar
-    intent: AddEvent
+      Can you find me some place to eat?
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      It starts at 9:45 in the night.
-    intent: AddEvent
+      Look for restaurants in Moraga.
+    intent: FindRestaurants_INFORM
   - action: utter_request
   - user: |
-      Can you call the event Gym.
-    intent: AddEvent
+      I want some Take-out.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
+  - user: |
+      Is it a cheap restaurant?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - user: |
+      Okay, that sounds good. I need to book a table for 1. How about on the 12th at 5 in the evening?
+    intent: ReserveRestaurant_SELECT
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes that sounds great.
-    intent: AddEvent
+      Yes that works. Does the restaurant have vegetarian options?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
   - action: utter_notify_success
   - user: |
-      Thanks.
-    intent: AddEvent
+      Thank you very much.
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      No thanks.
-    intent: Undefined
+      No. Thank you.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_53
   steps:
   - user: |
-      What's my schedule like on March 7th? Any free time?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Wasting away in Margaritaville.
-    intent: GetAvailableTime
-  - action: utter_offer_intent
-  - user: |
-      Yeah. There's something going on at 2905 Grove Way.
-    intent: AddEvent
+      Can you help me find a place to eat with outdoor seating?
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      Pencil in a Table for 2 at Mcdonald's for 15:45.
-    intent: AddEvent
+      Check restaurants in Bolinas that serve Veggie.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
+  - user: |
+      Do they have vegetarians options on the menu? Can you get me their phone number please?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      Yes, that is good.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
+  - user: |
+      Yes please, at 5 o"clock in the evening on 11th of this month.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      You got it.
-    intent: AddEvent
+      Please change that to half past 6 in the evening on 14th of March.
+    intent: ReserveRestaurant_NEGATE
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      Yes that is correct.
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_notify_success
   - user: |
-      Good job. I'm chill for now.
-    intent: AddEvent
+      Thank you so much. That is all.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_54
   steps:
   - user: |
-      Can you check out my calendar and find me a time when I am available?
-    intent: GetAvailableTime
+      I'd like to find a nice reasonably priced restaurant.
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      On the 4th of March please.
-    intent: GetAvailableTime
+      How about Seafood?
+    intent: FindRestaurants_INFORM
+  - action: utter_request
+  - user: |
+      Find Walnut Creek restaurants.
+    intent: FindRestaurants_INFORM
   - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
   - user: |
-      Okay great, that's what I thought. Add an event to my calendar for that day.
-    intent: AddEvent
-  - action: utter_request
+      Do you have something else, with vegetarian options? How about Greek food?
+    intent: FindRestaurants_REQUEST_ALTS
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
   - user: |
-      The event will take place at 2891 University Avenue in the morning 8:15.
-    intent: AddEvent
-  - action: utter_request
+      Sounds fabulous.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
   - user: |
-      Title it as The Hives Concert.
-    intent: AddEvent
+      Yes, reserve a table. I am interested in a table for 3rd of March. Make the reservation for 19:15.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Confirm that.
-    intent: AddEvent
-  - action: utter_notify_success
+      Sounds good. Tell me the restaurant's user rating.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
   - user: |
-      Great, thanks for your help bud.
-    intent: AddEvent
+      No, thanks.
+    intent: ReserveRestaurant_NEGATE
+  - action: utter_req_more
+  - user: |
+      No, but thank you.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_55
   steps:
   - user: |
-      I would like to know when I am available next Wednesday
-    intent: GetAvailableTime
+      Hi I'm hungry and want to go out to eat. Preferably something with vegetarian options that serves Pizza and Pasta.
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
+  - user: |
+      Please find me restaurants in Palo Alto.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Ok, then add an event
-    intent: AddEvent
+      Are the prices cheap? What is the average rating?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      Is there anything else you can recommend me?
+    intent: FindRestaurants_REQUEST_ALTS
+  - action: utter_offer
+  - action: utter_offer
+  - user: |
+      That sounds good.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
+  - user: |
+      Yes that would be great, book me a table.
+    intent: ReserveRestaurant_AFFIRM_INTENT
   - action: utter_request
   - user: |
-      Hairdresser appointment at half past 1 in the afternoon
-    intent: AddEvent
-  - action: utter_request
-  - user: |
-      1053 Cochrane Road Suite 140
-    intent: AddEvent
+      I would like to make a reservation for 4:30 in the evening.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes I confirm, perfect!
-    intent: AddEvent
-  - action: utter_notify_success
-  - user: |
-      Thank you so much!
-    intent: AddEvent
+      Yes, that is wonderful.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_failure
   - action: utter_req_more
   - user: |
-      No, thanks, it's all
-    intent: Undefined
+      Please try booking the table for half past 12 in the afternoon.
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      That works for me.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_success
+  - user: |
+      What is their contact number and address?
+    intent: ReserveRestaurant_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      Thank you very much.
+    intent: ReserveRestaurant_THANK_YOU
+  - action: utter_req_more
+  - user: |
+      No, that will be all. Thank you.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_56
   steps:
   - user: |
-      Hello, could you show me what time am I available on the 6th of March?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      I see, how about my available timing this Saturday?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      That sounds great.
-    intent: GetAvailableTime
-  - action: utter_offer_intent
-  - user: |
-      Sure! Please add an event titled Restaurant reservation for 4 at Ristorante Fratello which is located at 1712 Meridian Avenue.
-    intent: AddEvent
+      Hey, do you think you could help me find a nice place to eat?
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      Yes, it will start at quarter to 5 in the evening.
-    intent: AddEvent
+      Yeah, I could really go for some Punjabi right now. Can you find me something in San Carlos?
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
+  - user: |
+      Awesome! That sounds great.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
+  - user: |
+      Yes I would. Can you reserve a table for three at eleven AM on the 13th of this month?
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      That's perfect.
-    intent: AddEvent
+      Yes, that's right.
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_notify_success
   - user: |
-      Thank you for your kind assistance.
-    intent: AddEvent
+      Yeah, can you get their address for me?
+    intent: ReserveRestaurant_REQUEST
+  - action: utter_inform
+  - user: |
+      Okay, thank you so much!
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      No, that's all I need. Thank you!
-    intent: Undefined
+      No that is all. Thank you very much.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_57
   steps:
   - user: |
-      I am hoping to go view an apartment on the 11th of March. Do I have any available times that day?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Ok, that sounds great!
-    intent: GetAvailableTime
-  - action: utter_offer_intent
-  - user: |
-      Sure, could you please add it for 9:30 am?
-    intent: AddEvent
+      I can't figure out where to go to eat. Can you help?
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      Oh, sorry, please title it Apartment viewing and the location is 4875 Clayton Road.
-    intent: AddEvent
+      Find me a place in the San Jose area, maybe something Asian.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
+  - user: |
+      That sounds good to me.
+    intent: FindRestaurants_SELECT
+  - action: utter_req_more
+  - user: |
+      Uh, can you book me a table for one at that restaurant?
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_request
+  - user: |
+      Make it for 5:45 in the evening, please.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes, that is correct.
-    intent: AddEvent
-  - action: utter_notify_success
+      Yes that works for me. Confirmed.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_failure
+  - action: utter_req_more
   - user: |
-      No, that is all I need right now. Thanks so much for all of your help.
-    intent: AddEvent
+      Can you try booking another table for two at 6 in the evening?
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      Yes that is all correct.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_failure
+  - action: utter_req_more
+  - user: |
+      Just forget about it, I'll call them directly. Thank you for trying.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_58
   steps:
   - user: |
-      On March 9th show me please when I will be available.
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      In the 6th I have any other available time?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Please add an event on my calendar with tile Appointment with Dr. Azadeh Jafarnia at 2:30 in the afternoon.
-    intent: AddEvent
+      I'm hungry, where should I go?
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      At location 301 Sycamore Valley Road.
-    intent: AddEvent
+      How about some pasta in San Mateo?
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
+  - user: |
+      Nah, what about some Barbecue?
+    intent: FindRestaurants_REQUEST_ALTS
+  - action: utter_offer
+  - action: utter_offer
+  - user: |
+      Do they have vegetarian options? How much will this cost me?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      I guess I can eat meat once. Get me a table.
+    intent: ReserveRestaurant_SELECT
+  - action: utter_request
+  - user: |
+      Make it for 7:15 pm.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Sounds pefect for me.
-    intent: AddEvent
+      Ok, You twisted my arm. Do they have outdoor cafe style seating? What's their user rating?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_inform
   - action: utter_notify_success
   - user: |
-      Thanks for your help.
-    intent: AddEvent
+      Cool, thanks.
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      No.Thank you very much.
-    intent: Undefined
+      Not just yet.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_59
   steps:
   - user: |
-      I want to know what time I have available.
-    intent: GetAvailableTime
+      I'm looking for a classy restaurant in SF. Please help me find one.
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      The 9th of this month is what I'm curious about.
-    intent: GetAvailableTime
+      I'm craving something like Japanese. Find something like Izakaya.
+    intent: FindRestaurants_INFORM
   - action: utter_offer
-  - user: |
-      Do I have any other open slots, particularly for Saturday this week?
-    intent: GetAvailableTime
   - action: utter_offer
+  - action: utter_inform_count
   - user: |
-      Alright. That sounds great.
-    intent: GetAvailableTime
-  - action: utter_req_more
+      That sounds like just what I'm looking for.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
   - user: |
-      Sure. Please add an event to my calendar.
-    intent: AddEvent
+      I sure do. Book it for me.
+    intent: ReserveRestaurant_AFFIRM_INTENT
   - action: utter_request
   - user: |
-      Please put a Property viewing in the morning 8:30.
-    intent: AddEvent
-  - action: utter_request
-  - user: |
-      It's located at 1375 Montecito Avenue.
-    intent: AddEvent
+      Please make the reservation for 7:45 pm.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yeah. That is correct.
-    intent: AddEvent
+      That works just fine for me. I can't wait to go.
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_notify_success
   - user: |
-      Thanks for the help!
-    intent: AddEvent
+      Is there outdoor seating available? I need their phone number as well.
+    intent: ReserveRestaurant_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      No outdoor seating? That's okay. Anyway, thank you for your help.
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      Nope. That's it. Thank you.
-    intent: Undefined
+      No that's all. Thank you for your help.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_60
   steps:
   - user: |
-      Can you search for my available timing?
-    intent: GetAvailableTime
+      I want to find a place where I can have a meal.
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      Show me my free timings on March 10th.
-    intent: GetAvailableTime
+      The place should have vegetarian alternatives, more specifically some place that serves Sushi in Berkeley.
+    intent: FindRestaurants_INFORM
   - action: utter_offer
-  - user: |
-      Can you look for any other empty slot on 9th of March?
-    intent: GetAvailableTime
   - action: utter_offer
+  - action: utter_inform_count
   - user: |
-      That sounds good to me. Add one event to my calendar.
-    intent: AddEvent
-  - action: utter_request
+      Alright, this seems nice.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
   - user: |
-      The name of the event is Buddy Guy concert which will be occur at 235 West 46th Street at 12 in the afternoon.
-    intent: AddEvent
+      Yes, I want to have a table booked for me at this restaurant. I want to have the table to be reserved for two people on the 11th, as for the time, it should be for 2 pm.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes, That is correct.
-    intent: AddEvent
-  - action: utter_notify_success
-  - user: |
-      Okay. Thank you very much.
-    intent: AddEvent
+      Yes, that is what I want.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_failure
   - action: utter_req_more
   - user: |
-      No. That will be all. Thank you.
-    intent: Undefined
+      Would you mind trying again to book a table, but make it for four people at 7:15 pm
+    intent: ReserveRestaurant_INFORM_INTENT
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - user: |
+      Alright, that suits me well. Can you check if they have places to sit outside since I like fresh air.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
+  - user: |
+      I do not want that. That would be all.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_61
   steps:
   - user: |
-      When am I free on March 5th?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Ok. When am I free on the 8th?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Ok good.
-    intent: GetAvailableTime
-  - action: utter_offer_intent
-  - user: |
-      Yes. Add to my calendar an event at 261 Driggs Avenue, Brooklyn.
-    intent: AddEvent
+      Can you help me find a restaurant to eat dinner?
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      It's Amber Run Brooklyn concert at 19:00.
-    intent: AddEvent
+      Yes, I am looking for Greek food in Los Altos.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
+  - user: |
+      That one is good.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
+  - user: |
+      Yes, please reserve a table.
+    intent: ReserveRestaurant_AFFIRM_INTENT
+  - action: utter_request
+  - user: |
+      Make the reservations for half past 7 in the evening.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes that's right
-    intent: AddEvent
-  - action: utter_notify_success
+      No, let me make that for March 7th at two pm.
+    intent: ReserveRestaurant_NEGATE
+  - action: utter_confirm
+  - action: utter_confirm
   - user: |
-      Thanks so much.
-    intent: AddEvent
+      You got it, thank you.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_notify_failure
   - action: utter_req_more
   - user: |
-      Nah. Thanks.
-    intent: Undefined
+      No, that's OK, thank you.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_62
   steps:
   - user: |
-      Please show me when I have available time slots.
-    intent: GetAvailableTime
+      Help me find somewhere to eat.
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      The 4th of this month is the date I want you to check.
-    intent: GetAvailableTime
+      Find an Italian restaurant in Belmont.
+    intent: FindRestaurants_INFORM
   - action: utter_offer
-  - user: |
-      What about March 2nd? Do I have any available time then?
-    intent: GetAvailableTime
   - action: utter_offer
+  - action: utter_inform_count
   - user: |
-      Okay that sounds fine. Now, can you please add an event to my calendar?
-    intent: AddEvent
-  - action: utter_request
+      What's the phone number?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
   - user: |
-      The event will take place at 600 Wilbur Avenue at nine am.
-    intent: AddEvent
-  - action: utter_request
+      Great, thank you.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
   - user: |
-      List this event under the title Property viewing please.
-    intent: AddEvent
+      Yeah, reserve a table for 2 for the 14th of this month at morning 11:30.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes. that sounds correct.
-    intent: AddEvent
+      Correct, is it cheap and what's their address?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_inform
   - action: utter_notify_success
   - user: |
-      I appreciate the help. That's all I need for right now.
-    intent: AddEvent
+      Thank you again.
+    intent: ReserveRestaurant_THANK_YOU
+  - action: utter_req_more
+  - user: |
+      Nope, thank you!
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_63
   steps:
   - user: |
-      When do I have open availability?
-    intent: GetAvailableTime
+      I'm searching for a location to dine at.
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      5th of March, please
-    intent: GetAvailableTime
+      Get me a diner in San Francisco that offers Asian cuisine.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Hmmm, what about the 13th?
-    intent: GetAvailableTime
-  - action: utter_offer
+      Yeah, that's fine with me.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
   - user: |
-      Ok, can you please book a dentist appointment.
-    intent: AddEvent
+      Yeah, I'd like to make a reservation on March 5th.
+    intent: ReserveRestaurant_INFORM
   - action: utter_request
   - user: |
-      24307 Southland Drive and it's at 8:30 am
-    intent: AddEvent
+      Make the booking for 12:30 pm.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes, perfect
-    intent: AddEvent
+      Yeah, that's fine. Is the diner cheap? Where is it located?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_inform
   - action: utter_notify_success
   - user: |
-      Great, thanks.
-    intent: AddEvent
+      Thank you for your assistance.
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      Nope, thanks.
-    intent: Undefined
+      Nope; thank you for your help.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_64
   steps:
   - user: |
-      Can you tell me when I am going to be available?
-    intent: GetAvailableTime
+      Can you find me a place to eat around the SFO area?
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      Show me if I am available on Thursday next week.
-    intent: GetAvailableTime
+      I want some Ramen, that sounds good right now
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
+  - user: |
+      Where are they located?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - user: |
+      What else can you recommend to me?
+    intent: FindRestaurants_REQUEST_ALTS
+  - action: utter_offer
   - action: utter_offer
   - user: |
-      Sounds good, thank you.
-    intent: GetAvailableTime
-  - action: utter_offer_intent
+      Is it pricey there? And what's their rating
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - action: utter_inform
   - user: |
-      Yes, please add an event to my calendar at quarter past 1 in the afternoon.
-    intent: AddEvent
+      What about cheap restaurants that you can recommend?
+    intent: FindRestaurants_REQUEST_ALTS
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
+  - user: |
+      Oh that sounds good, book me a table please!
+    intent: ReserveRestaurant_SELECT
   - action: utter_request
   - user: |
-      Name the event Movie at Contra Costa Stadium Cinemas, located at 555 Center Avenue.
-    intent: AddEvent
+      Dinner time, around 18:30
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      That all sounds correct.
-    intent: AddEvent
+      Yes please, also what's their rating?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
   - action: utter_notify_success
   - user: |
-      That will be all, thanks for your help.
-    intent: AddEvent
+      Great, thanks for that
+    intent: ReserveRestaurant_THANK_YOU
+  - action: utter_req_more
+  - user: |
+      No, that's all for now, thank you
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_65
   steps:
   - user: |
-      Hey, can you show me when I'm free?
-    intent: GetAvailableTime
+      Hello, I was wondering if you could help me find a place to eat?
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      The 12th of March.
-    intent: GetAvailableTime
+      I would like to eat at a barbecue restaurant. Preferably somewhere in Emeryville.
+    intent: FindRestaurants_INFORM
   - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
   - user: |
-      Good to know.
-    intent: GetAvailableTime
-  - action: utter_offer_intent
-  - user: |
-      Yes, I would.
-    intent: AddEvent
-  - action: utter_request
-  - user: |
-      It's a General Practitioner appointment with John Toth, D.O. at 401 Gregory Ln # 248.
-    intent: AddEvent
-  - action: utter_request
-  - user: |
-      At 2:30 in the afternoon.
-    intent: AddEvent
+      Yes, that works for me. Can you help me book a table there? It will be a reservation for one person on March 10th at 11:45 am.
+    intent: ReserveRestaurant_SELECT
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes, this is it.
-    intent: AddEvent
+      Yes, that is correct.
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_notify_failure
+  - user: |
+      Yes, I can do that.
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_notify_success
   - user: |
-      Thanks for the help.
-    intent: AddEvent
+      Thank you for your help!
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      No, that's all.
-    intent: Undefined
+      No, that will be all. Thank you again.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_66
   steps:
   - user: |
-      Hey, when am I available?
-    intent: GetAvailableTime
+      Its boring to eat at home for a change i wish to eat outside. Will you find me a restaurant tagged intermediate priced for price?
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      March 11th.
-    intent: GetAvailableTime
+      Please find something like Lobster and find restaurants in Belmont.
+    intent: FindRestaurants_INFORM
   - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
   - user: |
-      Great. Add a new event to my calendar.
-    intent: AddEvent
+      ok thats great. it sound good to me.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
+  - user: |
+      Yes I need to reserve a table.
+    intent: ReserveRestaurant_AFFIRM_INTENT
   - action: utter_request
   - user: |
-      Gym. It's at night 9:30 in the Community Gym.
-    intent: AddEvent
+      Make the reservation at afternoon 12:30
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes, that's it.
-    intent: AddEvent
+      ok thats great. please fix it. DO they have vegetarians options on the menu?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
   - action: utter_notify_success
   - user: |
-      Thanks for the help.
-    intent: AddEvent
-  - action: utter_req_more
-  - user: |
-      No, that's all.
-    intent: Undefined
+      THanks a lot and thats all i need.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_67
   steps:
   - user: |
-      When am i free?
-    intent: GetAvailableTime
+      I'm new in town and would like to find a place to get something to eat.
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      12th of March
-    intent: GetAvailableTime
-  - action: utter_offer
+      Somewhere close by, so Mountain View would be great.
+    intent: FindRestaurants_INFORM
+  - action: utter_request
   - user: |
-      That is good
-    intent: GetAvailableTime
+      I really enjoy French food, if you can find a place that serves it.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
+  - user: |
+      That sounds great!
+    intent: FindRestaurants_SELECT
   - action: utter_offer_intent
   - user: |
-      Yes, please.
-    intent: AddEvent
-  - action: utter_request
-  - user: |
-      Sure, the event starts at eight in the night and is located at 1500 South capitol street southeast. put it by the name Baseball game: Nationals Vs Reds.
-    intent: AddEvent
+      Yes, please. I need to book a table for 4 and prefer it to be in the morning 11:45.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      yes that right
-    intent: AddEvent
+      That sounds great! Can you provide me with their location?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
   - action: utter_notify_success
   - user: |
-      Thanks for the help
-    intent: AddEvent
+      Can you give ma an idea of how pricey the establishment is?
+    intent: ReserveRestaurant_REQUEST
+  - action: utter_inform
+  - user: |
+      Thanks a lot!
+    intent: ReserveRestaurant_THANK_YOU
   - action: utter_req_more
   - user: |
-      No, thats it
-    intent: Undefined
+      Nope, that's all I need at the moment.
+    intent: Undefined_THANK_YOU
   - action: utter_goodbye
 - story: story_68
   steps:
   - user: |
-      Can you tell me when I am available?
-    intent: GetAvailableTime
+      Can you find me a Filipino place to eat.
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      The 9th of March.
-    intent: GetAvailableTime
+      I'm looking for something in Geyserville serving pasta outdoors.
+    intent: FindRestaurants_INFORM
   - action: utter_offer
-  - user: |
-      Do I have another available time on the 10th of March?
-    intent: GetAvailableTime
   - action: utter_offer
+  - action: utter_inform_count
   - user: |
-      That sounds good.
-    intent: GetAvailableTime
-  - action: utter_req_more
+      That one sounds okay.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
   - user: |
-      Add an event to my calendar.
-    intent: AddEvent
+      Yes. Please book.
+    intent: ReserveRestaurant_AFFIRM_INTENT
   - action: utter_request
   - user: |
-      The event name is Toto concert and it is at 858 North Broad Street.
-    intent: AddEvent
-  - action: utter_request
-  - user: |
-      The time is afternoon 12:45.
-    intent: AddEvent
+      Please reserve for 1 in the afternoon.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes, that is correct.
-    intent: AddEvent
+      Yes. That's correct.
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_notify_success
   - user: |
-      Thank you very much.
-    intent: AddEvent
-  - action: utter_req_more
-  - user: |
-      No, that is all. Thank you.
-    intent: Undefined
+      Thanks. That will be all.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_69
   steps:
   - user: |
-      When am I available on next Wednesday?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Can you look for any empty slot on 9th of March?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Okay, That sounds great to me.
-    intent: GetAvailableTime
-  - action: utter_req_more
-  - user: |
-      Yes, Can you add an event to my calendar?
-    intent: AddEvent
+      I have friends visiting and would like to find a place to eat.
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      Put the name as Movie booking for long shot which will be at quarter to 10 in the morning at 2508.
-    intent: AddEvent
+      I enjoy freshwater fish and would like to dine in San Fran.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
+  - user: |
+      Is this an ultra high-end restaurant? I will also need their address.
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      This place sounds great. Please reserve a table here.
+    intent: ReserveRestaurant_SELECT
+  - action: utter_request
+  - user: |
+      Please make a reservation for 12:30 on March 2nd.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yeah, That sounds great to me.
-    intent: AddEvent
+      That is exactly right.
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_notify_success
   - user: |
-      Okay. Thank you very much.
-    intent: AddEvent
-  - action: utter_req_more
-  - user: |
-      No. That will be all. Thank you.
-    intent: Undefined
+      Thank you for your help! That is all I need at the moment.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_70
   steps:
   - user: |
-      Can you help with my schedule, openness?
-    intent: GetAvailableTime
+      I'm planning to dine out soon. Can you help me select a restaurant in Mountain View?
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      Look on the 12th.
-    intent: GetAvailableTime
+      Sure, search for restaurants that have Ramen.
+    intent: FindRestaurants_INFORM
   - action: utter_offer
-  - user: |
-      Are there any other available times on the 2nd of March?
-    intent: GetAvailableTime
   - action: utter_offer
+  - action: utter_inform_count
   - user: |
-      Great. Add something for me will you?
-    intent: AddEvent
-  - action: utter_request
+      Can you tell me if they have seating available outside?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
   - user: |
-      3:15 in the afternoon at 5 Bon Air Rd # 114
-    intent: AddEvent
-  - action: utter_request
+      What is the average user rating for this establishment? Also, can you give me their contact number?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - action: utter_inform
   - user: |
-      Place Appointment with Koppe Michael J.
-    intent: AddEvent
+      Great, thanks!
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
+  - user: |
+      Sure, I'd like to make a reservation for 1 person at eleven in the morning on the 4th.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      That's great thank you.
-    intent: AddEvent
+      That is correct. Can you tell me the price range of this restaurant?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
   - action: utter_notify_success
   - user: |
-      great thanks.
-    intent: AddEvent
-  - action: utter_req_more
-  - user: |
-      No, I'm good thanks.
-    intent: Undefined
+      Great, thanks for your help! That's it for me.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_71
   steps:
   - user: |
-      Can I see when I'm available on the 10th of March?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Is there any other time available? What about March 7th?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Okay. Can you add an event on my calendar?
-    intent: AddEvent
+      Can you help me find a place to eat?
+    intent: FindRestaurants_INFORM_INTENT
+  - action: utter_request
   - action: utter_request
   - user: |
-      It's happening at 2901 East Hastings Street at 2:15 pm.
-    intent: AddEvent
+      I feel like Thai food. Find me something in San Fran.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
+  - user: |
+      Depends. What's their rating? Also do they have vegetarian options?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      Awesome. That sounds good to me.
+    intent: FindRestaurants_SELECT
+  - action: utter_offer_intent
+  - user: |
+      Yes, I do.
+    intent: ReserveRestaurant_AFFIRM_INTENT
   - action: utter_request
   - user: |
-      Please name it as Billy Idol concert on my calendar.
-    intent: AddEvent
+      Make it for 11:30 in the morning.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      Yes, that sounds perfect.
-    intent: AddEvent
+      Yes, confirmed.
+    intent: ReserveRestaurant_AFFIRM
   - action: utter_notify_success
   - user: |
-      Thanks for all the help.
-    intent: AddEvent
-  - action: utter_req_more
-  - user: |
-      Nope, that's it. Thanks.
-    intent: Undefined
+      Great. Thank you.
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
 - story: story_72
   steps:
   - user: |
-      When am I available on March 5th.
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      What other free time do I have on the 8th of this month?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Great.
-    intent: GetAvailableTime
-  - action: utter_offer_intent
-  - user: |
-      Yes I'd like to add an event to my calendar.
-    intent: AddEvent
+      I am planning on going out for a meal with friends. Can you find me a place in Healdsburg?
+    intent: FindRestaurants_INFORM_INTENT
   - action: utter_request
   - user: |
-      The event address is 50 South San Mateo Drive and the time is afternoon 3. The title is General Practitioner appointment.
-    intent: AddEvent
+      Sure. I'm interested in restaurants that serve Diner food.
+    intent: FindRestaurants_INFORM
+  - action: utter_offer
+  - action: utter_offer
+  - action: utter_inform_count
+  - user: |
+      Can you tell me the user rating for this establishment? Also, is outdoor seating available?
+    intent: FindRestaurants_REQUEST
+  - action: utter_inform
+  - action: utter_inform
+  - user: |
+      Great, that sounds perfect! I would like to go ahead and make a reservation here.
+    intent: ReserveRestaurant_SELECT
+  - action: utter_request
+  - user: |
+      I would like a reservation for 6:30 in the evening, please.
+    intent: ReserveRestaurant_INFORM
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
+  - action: utter_confirm
   - action: utter_confirm
   - user: |
-      That's correct.
-    intent: AddEvent
+      Yes, that's perfect! Can you tell me if the price range is affordable? And also, are there menu items for vegetarians?
+    intent: ReserveRestaurant_AFFIRM
+  - action: utter_inform
+  - action: utter_inform
   - action: utter_notify_success
   - user: |
-      Thanks.
-    intent: AddEvent
-  - action: utter_req_more
-  - user: |
-      No that's all for now thanks.
-    intent: Undefined
+      Excellent. Thanks for you help. That's everything for me!
+    intent: ReserveRestaurant_GOODBYE
   - action: utter_goodbye
-- story: story_73
-  steps:
-  - user: |
-      Hey. Can you show me when I am available?
-    intent: GetAvailableTime
-  - action: utter_request
-  - user: |
-      March 8th, please.
-    intent: GetAvailableTime
-  - action: utter_inform_count
-  - user: |
-      Do I have any free time on March 11th?
-    intent: GetAvailableTime
-  - action: utter_inform_count
-  - user: |
-      Any other time available?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      Sounds good. Create a new event on my calendar.
-    intent: AddEvent
-  - action: utter_request
-  - user: |
-      The location is 4175, 42151 Blacow Road.
-    intent: AddEvent
-  - action: utter_request
-  - user: |
-      At afternoon 3, please. It's a Hairdresser appointment.
-    intent: AddEvent
-  - action: utter_confirm
-  - user: |
-      Yes, that's it.
-    intent: AddEvent
-  - action: utter_notify_success
-  - user: |
-      That's all. Thanks for the help.
-    intent: AddEvent
-  - action: utter_goodbye
-- story: story_74
-  steps:
-  - user: |
-      Show me my availability
-    intent: GetAvailableTime
-  - action: utter_request
-  - user: |
-      For the 5th
-    intent: GetAvailableTime
-  - action: utter_inform_count
-  - user: |
-      Is there any other time available? Maybe on the 3rd of this month
-    intent: GetAvailableTime
-  - action: utter_inform_count
-  - user: |
-      Anything else available?
-    intent: GetAvailableTime
-  - action: utter_offer
-  - user: |
-      That sounds good
-    intent: GetAvailableTime
-  - action: utter_offer_intent
-  - user: |
-      Yes, add an event
-    intent: AddEvent
-  - action: utter_request
-  - user: |
-      It's at 2 pm. A hairdresser appointment at 1880 Solano Avenue
-    intent: AddEvent
-  - action: utter_confirm
-  - user: |
-      Yes that's correct
-    intent: AddEvent
-  - action: utter_notify_success
-  - user: |
-      That's all for now, thanks
-    intent: AddEvent
-  - action: utter_goodbye
-- story: story_75
-  steps:
-  - user: |
-      What is my availability on the 14th.
-    intent: GetAvailableTime
-  - action: utter_offer
